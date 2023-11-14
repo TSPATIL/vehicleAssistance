@@ -1,0 +1,27 @@
+.custom-card {
+    background: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    height: 300px; /* Set a fixed height for all containers */
+    overflow: auto;
+}
+.custom-card h2 {
+    color: #333;
+}
+.custom-card h3 {
+    color: #6c757d; /* Subheading color */
+}
+.shadowed-title {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #333;
+}
+/* Decrease header padding and style the "About Us" */
+header {
+    padding: 2rem;
+}
+.about-us-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
