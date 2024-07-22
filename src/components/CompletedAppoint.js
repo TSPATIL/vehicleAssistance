@@ -11,7 +11,7 @@ export default function CompletedAppoint(props) {
         <p className="card-text"><b>Type:</b> {appoint.vType}</p>
         <p className="card-text"><b>Name:</b> {appoint.vName}</p>
         <p className="card-text"><b>Brand:</b> {appoint.vCompany}</p>
-        <p className="card-text"><b>Location:</b> {appoint.vPickLocation}</p>
+        <p className="card-text"><b>Location:</b> {appoint.vPickLocation.lat} {appoint.vPickLocation.lng}</p>
         <p className="card-text"><b>Appointment Status</b> {appoint.a_status}</p>
         <p className="card-text"><b>Transaction Status</b> {appoint.t_status}</p>
         <p className="card-text"><b>Transaction cost:</b> {appoint.t_cost}</p>

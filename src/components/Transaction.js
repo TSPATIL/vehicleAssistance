@@ -163,7 +163,7 @@ export default function Transaction() {
                             <li className="list-group-item d-flex justify-content-between lh-sm">
                                 <div>
                                     <h6 className="my-0">Vehicle Location</h6>
-                                    <small className="text-body-secondary" name='vLocation' onChange={handleOnChange}>{transact.vLocation}</small>
+                                    <small className="text-body-secondary" name='vLocation' onChange={handleOnChange}>{transact.vLocation.lat} {transact.vLocation.lng}</small>
                                 </div>
                             </li>
                             <li className="list-group-item d-flex justify-content-between lh-sm">

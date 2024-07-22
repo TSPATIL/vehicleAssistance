@@ -14,9 +14,9 @@ export default function Navbar() {
     }
     let location = useLocation();
     return (
-        <nav className="navbar navbar-expand-sm bg-success sticky-top" data-bs-theme="dark" style={{ height: "80px" }}>
+        <nav className="navbar navbar-expand-sm bg-secondary sticky-top" data-bs-theme="dark" style={{ height: "80px" }}>
             <div className="container-fluid">
-                <Link className="navbar-brand mx-3" to="/"><img src={logo} width='100px'height='100px' alt='Logo' /></Link>
+                <Link className="navbar-brand mx-3" to="/"><img src={logo} width='30%'height='30%' alt='Logo' /></Link>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul className="navbar-nav col-lg justify-content-lg-center">
                         <li className="nav-item">

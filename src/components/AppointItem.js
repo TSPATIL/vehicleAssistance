@@ -14,7 +14,7 @@ export default function AppointItem(props) {
                     <p className="card-text"><b>Type:</b> {appoint.vType}</p>
                     <p className="card-text"><b>Name:</b> {appoint.vName}</p>
                     <p className="card-text"><b>Brand:</b> {appoint.vCompany}</p>
-                    <p className="card-text"><b>Location:</b> {appoint.vPickLocation}</p>
+                    <p className="card-text"><b>Location:</b> {appoint.vPickLocation.lat} {appoint.vPickLocation.lng}</p>
                     <hr/>
                     <i className="fa-solid fa-caret-down mx-2" onClick={()=>{viewAppoint(appoint)}}></i>
                     <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateAppoints(appoint)}}></i>

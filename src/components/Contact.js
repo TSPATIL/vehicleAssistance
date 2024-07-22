@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { IoIosContact } from "react-icons/io";
 
 export default function Contact() {
     const [contact, setContact] = useState({ name: '', email: '', subject: '', comment: '' });
@@ -28,8 +29,8 @@ export default function Contact() {
 
     return (
         <div className="col-md-10 mx-auto col-lg-4 my-5">
-            <form id='contactForm' className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit}>
-                <h3 className='text-center mb-4'>Contact us</h3>
+            <form id='contactForm' className="p-4 p-md-5 border rounded-3 bg-dark text-white" onSubmit={handleSubmit}>
+                <h3 className='text-center mb-4' style={{fontSize: "32px"}}><IoIosContact className='text-white' style={{fontSize: "80px"}} /> Contact us</h3>
                 <div className="form-floating mb-3">
                     <input type="name" className="form-control" id="floatingInput" name='name' value={contact.name} onChange={handleOnChange} placeholder="Full Name" />
                     <label htmlFor="floatingInput">Full Name</label>

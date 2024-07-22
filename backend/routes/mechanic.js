@@ -24,6 +24,7 @@ router.post('/createmechanic', fetchuser, [
 ], async (req, res)=>{
     try {
         let success = false;
+        console.log(req.body)
         const result = validationResult(req);
         if(!result.isEmpty()){
             return res.status(400).json({success, error: result.array()});
@@ -185,7 +186,9 @@ router.put('/updatemechanicstatus/:id', fetchuser, async (req, res)=>{
 //Route 11: Get all details of mechanic using GET: "/api/appoint/getappointdetails/:id". Login Required
 router.get('/getmechanicdetails/:id', fetchuser, async (req, res)=>{
     try {
-        const mechanic = await Mechanic.find({_id: req.params.id});
+        console.log(req.params.id)
+        const mechanic = await Mechanic.find({user: req.params.id});
+        console.log(mechanic)
         res.json(mechanic);
     } catch (error) {
         console.error(error.message);

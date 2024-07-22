@@ -11,7 +11,7 @@ export default function OngoingsAppoint(props) {
           <p className="card-text"><b>Type:</b> {appoint.vType}</p>
           <p className="card-text"><b>Name:</b> {appoint.vName}</p>
           <p className="card-text"><b>Brand:</b> {appoint.vCompany}</p>
-          <p className="card-text"><b>Location:</b> {appoint.vPickLocation}</p>
+          <p className="card-text"><b>Location:</b> {appoint.vPickLocation.lat} {appoint.vPickLocation.lng}</p>
           <p className="card-text"><b>Status</b> {appoint.a_status}</p>
           <hr />
           <button className="btn btn-primary mx-2 col-5" onClick={() => { viewAppoint(appoint) }} >View</button>

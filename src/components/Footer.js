@@ -1,62 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Link
 } from 'react-router-dom'
+import Aos from 'aos';
 
 export default function Footer() {
+    useEffect(() => {
+      Aos.init()
+    }, [])
     return (
         <div className='bg-dark-subtle'>
         <div className="container bg-dark-subtle">
             <footer className="py-5">
                 <div className="row">
-                    <div className="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Home</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Features</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Pricing</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">FAQs</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">About</Link></li>
+                    <div className="">
+                        <h5 data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Navigation Links</h5>
+                        <ul className="nav flex-row gap-3">
+                            <li data-aos="flip-down" className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Home</Link></li>
+                            <li data-aos="flip-down" className="nav-item mb-2"><Link to='/book' className="nav-link p-0 text-body-secondary">Book Appointment</Link></li>
+                            <li data-aos="flip-down" className="nav-item mb-2"><Link to='/contact' className="nav-link p-0 text-body-secondary">Contact us</Link></li>
+                            <li data-aos="flip-down" className="nav-item mb-2"><Link to='/about' className="nav-link p-0 text-body-secondary">About us</Link></li>
+                            <li data-aos="flip-down" className="nav-item mb-2"><Link to='/login' className="nav-link p-0 text-body-secondary">Login</Link></li>
                         </ul>
-                    </div>
-
-                    <div className="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Home</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Features</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Pricing</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">FAQs</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">About</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Home</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Features</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">Pricing</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">FAQs</Link></li>
-                            <li className="nav-item mb-2"><Link to='/' className="nav-link p-0 text-body-secondary">About</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of what's new and exciting from us.</p>
-                            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                                <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
-                                <input id="newsletter1" type="text" className="form-control" placeholder="Email address" />
-                                <button className="btn btn-primary" type="button">Subscribe</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
 
-                <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p>© 2023 Company, Inc. All rights reserved.</p>
+                <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-3 border-top">
+                    {/* <p>© 2023 Company, Inc. All rights reserved.</p> */}
                     <ul className="list-unstyled d-flex">
                         <li className="ms-3"><Link className="link-body-emphasis" to='/'><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-twitter mx-1" viewBox="0 0 16 16">
                             <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />

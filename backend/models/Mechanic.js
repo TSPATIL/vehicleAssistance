@@ -56,7 +56,7 @@ const mechanicSchema = new Schema({
     required: true
   },
   mLocation: {
-    type: String,
+    type: Object,
     required: true
   },
   m_status: {

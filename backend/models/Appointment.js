@@ -63,7 +63,7 @@ const appointSchema = new Schema({
     required: true
   },
   vPickLocation: {
-    type: String,
+    type: Object,
     required: true
   },
   omcomment: {

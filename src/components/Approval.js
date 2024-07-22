@@ -77,6 +77,7 @@ export default function Approval() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('approval.mLocation');
         const response = await fetch('http://127.0.0.1:5000/api/mechanic/createmechanic', {
             method: "POST",
             headers: {
@@ -107,9 +108,10 @@ export default function Approval() {
     }
 
     const handleSubmitLocation = () => {
+        console.log(location)
         refClose.current.click()
         setApproval({
-            vPickLocation: location
+            mLocation: location
         })
     }
 

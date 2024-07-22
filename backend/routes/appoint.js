@@ -26,6 +26,7 @@ router.post('/createappoint', fetchuser, [
 ], async (req, res)=>{
     try {
         let success = false;
+        console.log(req.body)
         const result = validationResult(req);
         if(!result.isEmpty()){
             return res.status(400).json({success, error: result.array()});
@@ -34,6 +35,7 @@ router.post('/createappoint', fetchuser, [
         const appoint = new Appoint({
             vOwnerName, vOwnerEmail, vOwnerContactNo, vOwnerAddress, vOwnerCountry, vOwnerState, vOwnerPincode, vDriverName, vDriverEmail, vDriverContactNo, vType, vName, vCompany, vRegisteredNo, vPickLocation, omcomment, user: req.user.id
         });
+        console.log(1)
         const savedAppoint = await appoint.save();
         success = true;
         res.json({success, savedAppoint});

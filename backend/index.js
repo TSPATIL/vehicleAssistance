@@ -26,5 +26,5 @@ app.use('/api/checkout', require('./routes/payment'));
 app.use('/api/contact', require('./routes/contact'));
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://127.0.0.1:${port}`);
+  console.log(`Vehicle breakdown assistance system app listening at http://127.0.0.1:${port}`);
 })

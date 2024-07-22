@@ -21,7 +21,7 @@ import TransactState from './context/transactions/TransactState';
 function App() {
   return (
 
-    <div className="App bg-success-subtle">
+    <div className="App bg-white">
       <AppointState>
         <StatusState>
           <TransactState>

@@ -302,14 +302,9 @@ export default function Book() {
                 </main>
             </div>
 
-
-
-            {/* <!-- Button trigger modal --> */}
             <button type="button" className="btn btn-primary d-none" data-bs-toggle="modal" ref={ref} data-bs-target="#exampleModal">
                 Launch demo modal
             </button>
-
-            {/* <!-- Modal --> */}
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-xl">
                     <div className="modal-content">

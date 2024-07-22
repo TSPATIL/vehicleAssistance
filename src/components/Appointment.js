@@ -127,7 +127,6 @@ export default function Appointment() {
     refClose.current.click();
   }
 
-
   const [btnradio, setBtnradio] = useState(1);
   const handleonRadioChange = (e) => {
     if (document.getElementById('btnradio1').checked === true) {
@@ -165,13 +164,13 @@ export default function Appointment() {
 
   const navigate = useNavigate();
   const transactAppoint = (currentAppoint)=>{
+    console.log(currentAppoint.mechanic)
     setTransact({ownerName: currentAppoint.vOwnerName, t_cost: currentAppoint.t_cost, appoint: currentAppoint._id, vType:currentAppoint.vType, vName:currentAppoint.vName, vRegistrationNo: currentAppoint.vRegisteredNo, vLocation:currentAppoint.vPickLocation, vProblem:currentAppoint.omcomment, mechanic:currentAppoint.mechanic});
     navigate('/transactions');
   }
 
   return (
     <>
-
       <div className="container my-5">
         <div className="py-4 text-center">
           <h2>Appointments</h2>
@@ -179,7 +178,7 @@ export default function Appointment() {
         <hr className="mb-4" />
         <div className="btn-group col-12" aria-label="Basic radio toggle button group">
           <input type="radio" className="btn-check" name="btnradio" id="btnradio1" onClick={handleAcceptAppoint} onChange={handleonRadioChange} />
-          <label className="btn btn-outline-primary" htmlFor="btnradio1">Accept</label>
+          <label className="btn btn-outline-primary" htmlFor="btnradio1">Under Acceptance</label>
 
           <input type="radio" className="btn-check" name="btnradio" id="btnradio2" onClick={handleSubmitAppoint} onChange={handleonRadioChange} />
           <label className="btn btn-outline-primary" htmlFor="btnradio2">Ongoing</label>
